@@ -3,7 +3,7 @@
 
 // Use Vercel Environment Variables, fallback to local for testing
 define('DB_HOST',    getenv('DB_HOST') ?: 'db.kfvxqjndcfbprxxapaqo.supabase.co');
-define('DB_PORT',    getenv('DB_PORT') ?: '5432'); // Supabase Transaction Pooler Port
+define('DB_PORT',    getenv('DB_PORT') ?: '6543'); // Supabase Transaction Pooler Port
 define('DB_NAME',    getenv('DB_NAME') ?: 'postgres');
 define('DB_USER',    getenv('DB_USER') ?: 'postgres');
 define('DB_PASS',    getenv('DB_PASSWORD') ?: 'shimaisadmin1819'); // Make sure you add this in Vercel!
