@@ -1,22 +1,23 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "index.php",
-      "use": "vercel-php@0.7.1"
-    },
-    {
-      "src": "admin/index.php",
-      "use": "vercel-php@0.7.1"
-    },
-    {
-      "src": "student/index.php",
-      "use": "vercel-php@0.7.1"
-    }
+    { "src": "index.php", "use": "vercel-php@0.7.1" },
+    { "src": "login.php", "use": "vercel-php@0.7.1" },
+    { "src": "logout.php", "use": "vercel-php@0.7.1" },
+    { "src": "register.php", "use": "vercel-php@0.7.1" },
+    { "src": "result.php", "use": "vercel-php@0.7.1" },
+    { "src": "exam_view.php", "use": "vercel-php@0.7.1" },
+    { "src": "config.php", "use": "vercel-php@0.7.1" },
+    { "src": "admin/*.php", "use": "vercel-php@0.7.1" },
+    { "src": "student/*.php", "use": "vercel-php@0.7.1" },
+    { "src": "includes/*.php", "use": "vercel-php@0.7.1" }
   ],
   "routes": [
-    { "src": "/admin(.*)", "dest": "/admin/index.php" },
-    { "src": "/student(.*)", "dest": "/student/index.php" },
+    { "src": "/admin/(.*)", "dest": "/admin/$1" },
+    { "src": "/student/(.*)", "dest": "/student/$1" },
+    { "src": "/includes/(.*)", "dest": "/includes/$1" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/(.*\\.php)", "dest": "/$1" },
     { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
