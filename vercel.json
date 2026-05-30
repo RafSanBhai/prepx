@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "**/*.php",
-      "use": "vercel-php@0.7.1"
+  "functions": {
+    "**/*.php": {
+      "runtime": "vercel-php@0.7.1"
     }
-  ],
+  },
   "routes": [
     { "src": "/admin/(.*)", "dest": "/admin/$1" },
     { "src": "/student/(.*)", "dest": "/student/$1" },
