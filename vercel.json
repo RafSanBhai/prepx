@@ -1,13 +1,22 @@
 {
   "version": 2,
   "builds": [
-    { "src": "*.php", "use": "vercel-php@0.7.1" },
-    { "src": "admin/*.php", "use": "vercel-php@0.7.1" },
-    { "src": "student/*.php", "use": "vercel-php@0.7.1" }
+    {
+      "src": "index.php",
+      "use": "vercel-php@0.7.1"
+    },
+    {
+      "src": "admin/index.php",
+      "use": "vercel-php@0.7.1"
+    },
+    {
+      "src": "student/index.php",
+      "use": "vercel-php@0.7.1"
+    }
   ],
   "routes": [
-    { "src": "/admin/(.*)", "dest": "/admin/$1" },
-    { "src": "/student/(.*)", "dest": "/student/$1" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/admin(.*)", "dest": "/admin/index.php" },
+    { "src": "/student(.*)", "dest": "/student/index.php" },
+    { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
